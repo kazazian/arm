@@ -355,6 +355,10 @@ section {
   padding: 0 0 18px;
 }
 
+.service-card > .price-list {
+  padding: 10px 24px 24px;
+}
+
 .price-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
