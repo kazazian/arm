@@ -6,7 +6,9 @@ if (cookieBanner && localStorage.getItem("arma-cookie-choice") === null) {
 
 document.querySelectorAll("[data-cookie-choice]").forEach((button) => {
   button.addEventListener("click", () => {
-    localStorage.setItem("arma-cookie-choice", button.dataset.cookieChoice);
+    if (button.dataset.cookieChoice === "accepted") {
+      localStorage.setItem("arma-cookie-choice", "accepted");
+    }
     if (cookieBanner) {
       cookieBanner.classList.remove("is-visible");
     }
