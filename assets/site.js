@@ -1,5 +1,9 @@
 const cookieBanner = document.querySelector("[data-cookie-banner]");
 
+if (window.location.pathname.endsWith("/index.html")) {
+  window.history.replaceState(null, "", window.location.pathname.replace(/index\\.html$/, "") + window.location.search + window.location.hash);
+}
+
 if (cookieBanner && localStorage.getItem("arma-cookie-choice") === null) {
   cookieBanner.classList.add("is-visible");
 }
